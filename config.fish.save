@@ -1,7 +1,3 @@
-set -x LANG en_US.UTF-8
-set -x SDKMAN_DIR $HOME/.sdkman
-
-set -x NVM_DIR "$HOME/.nvm"
 set -x PATH "$HOME/.cargo/bin" $PATH
 # Ensure Homebrew paths are included
 set -gx PATH /opt/homebrew/bin $PATH
@@ -115,35 +111,3 @@ set -x SDKROOT (xcrun --sdk macosx --show-sdk-path)
 
 set -gx PATH /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin $PATH
 set -x CC cc
-
-
-function nvm
-    bass source ~/.nvm/nvm.sh ';' nvm $argv
-end
-
-set -x PATH /usr/local/bin $PATH
-
-set -xg LS_COLORS "di=01;32"
-set -g fish_color_command cyan
-set -g fish_color_param yellow
-set -g fish_color_comment red
-set -g fish_color_error magenta
-
-
-set -Ux PATH /path/to/rider/bin $PATH
-#set -gx PATH /Users/yusufcaliskan/Library/Python/3.12/bin $PATH
-
-set -gx PATH /Applications/RustRover.app/Contents/MacOS $PATH
-set -gx PATH /Applications/WebStorm.app/Contents/MacOS $PATH
-set -gx PATH /Applications/Rider.app/Contents/MacOS $PATH
-
-set -U fish_user_paths $fish_user_paths /Users/yusufcaliskan/go/bin
-
-# Added by Windsurf
-fish_add_path /Users/yusufcaliskan/.codeium/windsurf/bin
-
-set -U fish_user_paths /Users/yusufcaliskan/.local/bin $fish_user_paths
-
-
-# Added by Windsurf
-fish_add_path /Users/yusufcaliskan/.codeium/windsurf/bin
